@@ -70,6 +70,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+
+
+Overview of the project: it's a site to vote for your favourite Horned Beast
+
+
+
+
 Number and name of feature: Feature #1: Display images & Feature #2: Allow users to vote for their favorite beast & Feature 3: Bootstrap
 
 Estimate of time needed to complete: 2 hours
