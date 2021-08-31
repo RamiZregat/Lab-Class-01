@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+// import Col from 'react-booststrap/Col';
+// import Row from 'react-booststrap/Row';
 
 class HornedBeasts extends React.Component {
 
@@ -10,20 +12,22 @@ class HornedBeasts extends React.Component {
         this.state = {
             VoteNumber: 0
         }
-    }
+    };
 
     incrementVoteNumber = () => {
         this.setState({
             VoteNumber: this.state.VoteNumber + 1
         })
-    }
+    };
 
 
 
     render() {
         return (
             <>
-                <Card style={{ width: '18rem' }}>
+            {/* <Row xs={1} md={2} className="g-4">
+            <Col> */}
+                <Card style={{ width: '18rem'}}>
                     <Card.Img variant="top" src={this.props.src} alt={this.props.alt} onClick={this.incrementVoteNumber} />
                     <Card.Body>
                         <Card.Title>Title: {this.props.title}</Card.Title>
@@ -34,8 +38,11 @@ class HornedBeasts extends React.Component {
                         <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
                 </Card>
+                {/* </Col>
+               
+                </Row> */}
             </>
         )
     }
-}
+};
 export default HornedBeasts;
