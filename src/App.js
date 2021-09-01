@@ -11,6 +11,7 @@ class App extends React.Component {
     this.state = {
       ModalForm: {},
       handleshow: false,
+      Data: data,
     };
   }
   handleCloseFunction = () => {
@@ -20,7 +21,7 @@ class App extends React.Component {
   };
 
   ModalFunction = (Title) => {
-    let ModalArray = data.find((item) => {
+    let ModalArray = this.state.Data.find((item) => {
       if (item.title === Title) {
         console.log(item);
         return item;
@@ -32,6 +33,7 @@ class App extends React.Component {
     });
     console.log(this.state.ModalForm);
   };
+
   render() {
     console.log(this.state.handleshow);
     return (
@@ -45,7 +47,7 @@ class App extends React.Component {
           handleClose={this.handleCloseFunction}
         />
         <Header />
-        <Main data={data} ModalFunction={this.ModalFunction} />
+        <Main data={this.state.Data} ModalFunction={this.ModalFunction} />
         <Footer />
       </>
     );
