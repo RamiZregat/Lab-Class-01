@@ -13,6 +13,7 @@ class HornedBeasts extends React.Component {
   }
   Modals = () => {
     this.props.function(this.props.title);
+    this.incrementVoteNumber();
   };
 
   incrementVoteNumber = () => {
@@ -25,14 +26,8 @@ class HornedBeasts extends React.Component {
     return (
       <>
         <Col>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src={this.props.src}
-              alt={this.props.alt}
-              onClick={this.incrementVoteNumber}
-              onClick={this.Modals}
-            />
+          <Card onClick={this.Modals} style={{ width: "18rem" }}>
+            <Card.Img variant="top" src={this.props.src} alt={this.props.alt} />
             <Card.Body>
               <Card.Title>Title: {this.props.title}</Card.Title>
               <Card.Text>Description: {this.props.description}</Card.Text>
